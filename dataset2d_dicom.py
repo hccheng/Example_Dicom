@@ -8,9 +8,16 @@ import numpy as np
 
 class Dataset2D_DICOM(Dataset):
     def __init__(self):
+        """Initialize a dataset
+        """
         Dataset.__init__(self)
 
     def _load(self, fn):
+        """Load the dataset stored in a csv file (implementation)
+
+        :param fn: filepath to the csv file
+        """
+
         if not os.path.isfile(fn):
             raise RuntimeError('file does not exist / input is not a file')
         data_dir = os.path.dirname(fn)
@@ -79,5 +86,12 @@ class Dataset2D_DICOM(Dataset):
             raise RuntimeError('cannot open csv file "{}"'.format(fn))
 
     def extract(self, indices):
-        Dataset.extract(self, indices)
+        """Extract slice(s) from the dataset
+
+        :param indices: an index or a list of indices
+        :return: corresponding image(s) and label(s)
+        """
+
+        if not isinstance(indices, int) and not isinstance(indices, list) and not isinstance(indices, np.ndarray):
+            raise RuntimeError('invalid type of indices (should be int or list of int)')
         return self._data[self._DATA_KEY][indices], self._data[self._LABEL_KEY][indices]
