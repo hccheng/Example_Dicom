@@ -11,7 +11,7 @@ class TestDatasetExtraction(unittest.TestCase):
         dataset = Dataset2D_DICOM()
         dataset.load(TESTDATA_CSV)
 
-        self.assertEqual(dataset.size(), 96)
+        self.assertEqual(dataset.size(), 37)
 
         # extract one at a time
         for i in range(dataset.size()):
@@ -19,7 +19,7 @@ class TestDatasetExtraction(unittest.TestCase):
             self.assertEqual(len(d), 2)
             self.assertEqual(d[0].shape, d[1].shape)
             self.assertEqual(d[0].dtype, np.int16)
-            self.assertEqual(d[1].dtype, np.bool)
+            self.assertEqual(d[1].dtype, np.uint8)
 
         # extract a batch at a time
         for i in range(100):
@@ -29,7 +29,7 @@ class TestDatasetExtraction(unittest.TestCase):
             self.assertEqual(len(batch), 2)
             self.assertEqual(batch[0].shape, batch[1].shape)
             self.assertEqual(batch[0].dtype, np.int16)
-            self.assertEqual(batch[1].dtype, np.bool)
+            self.assertEqual(batch[1].dtype, np.uint8)
 
             for j, d in enumerate(batch[0]):
                 self.assertTrue(np.array_equal(d, dataset.extract(shuffle[j])[0]))
@@ -44,7 +44,7 @@ class TestDatasetExtraction(unittest.TestCase):
         batch = dataset.extract(shuffle[:8])
         for i in range(8):
             plt.imshow(batch[0][i], cmap='gray')
-            plt.imshow(batch[1][i], alpha=0.5, cmap='Set1_r')
+            plt.imshow(batch[1][i], alpha=0.5, cmap='jet')
             plt.show()
         '''
 

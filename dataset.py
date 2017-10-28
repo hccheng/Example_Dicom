@@ -4,6 +4,8 @@ class Dataset:
         """
         self._DATA_KEY = 'pixel_data'
         self._LABEL_KEY = 'label'
+        self.LABEL_HEART_MUSCLE = 1  # heart muscle = 1
+        self.LABEL_BLOOD_POOL = 2  # blood pool = 2
         self._data = None
         self._n = 0
 
