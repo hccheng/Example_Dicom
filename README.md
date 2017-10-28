@@ -69,7 +69,7 @@ c. Watershed segmentation
 
 Generate markers then apply standard watershed algorithm.
 
-We evaluate performance using accuracy, recall, and Jaccard index.
+We evaluate performance using accuracy, recall, and Jaccard index. The left and right numbers correspond to the result of heart muscle and blood pool.
 
 | Model         | Accuracy      | Recall        | Jaccard       |
 | ------------- | ------------- | ------------- | ------------- |
