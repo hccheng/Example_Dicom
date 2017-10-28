@@ -61,10 +61,7 @@ a. thresholding (threshold = 0 / Otsu / Li)
 We can easily see how thresholding can be useful by looking at the intensity histograms. After normalizing the image to zero mean unit variance, we could then generate a binary image by picking an appropriate threshold value.
 Besides using zero as threshold, we could also use other heuristics (i.e. Otsu and Li) to determine the threshold value.
 
-![histogram](/images/histogram.png)
-*image_caption*
-
-| ![histogram](/images/histogram.png) |
+| ![histogram](/images/histogram.png | width=100) |
 |:--:|
 | *The histogram generated with the 59th slice of SC-HF-I-1* |
 
@@ -75,6 +72,10 @@ Assuming that the intensity values of the two classes are both generated with a 
 c. Watershed segmentation
 
 Generate markers then apply standard watershed algorithm.
+
+| ![watershed](/images/watershed.png | width=100) |
+|:--:|
+| *The histogram generated with the 59th slice of SC-HF-I-1* |
 
 [[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
 
@@ -93,3 +94,5 @@ Results of models marked with "[postprocessed]" are postprocessed by morphologic
 | threshold (GMM), [postprocessed]  | 0.906 / 0.835  | 0.757 / 0.939  | 0.702 / 0.792        |
 | Watershed  | 0.848 / 0.931  | 0.874 / 0.915  | 0.756 / 0.857        |
 | Watershed, [postprocessed]  | 0.843 / 0.932  | 0.875 / 0.912  | 0.752 / 0.855        |
+
+The results suggest that watershed segmentation works the best.
