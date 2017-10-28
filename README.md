@@ -61,7 +61,8 @@ a. thresholding (threshold = 0 / Otsu / Li)
 We can easily see how thresholding can be useful by looking at the intensity histograms. After normalizing the image to zero mean unit variance, we could then generate a binary image by picking an appropriate threshold value.
 Besides using zero as threshold, we could also use other heuristics (i.e. Otsu and Li) to determine the threshold value.
 
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+![histogram](/images/histogram.png)
+*image_caption*
 
 b. thresholding (Gaussian mixture model, GMM)
 
