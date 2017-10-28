@@ -73,11 +73,13 @@ c. Watershed segmentation
 
 Generate markers then apply standard watershed algorithm.
 
-| ![watershed_marker](/images/watershed_marker.png) |
+| ![watershed_markers](/images/watershed_markers.png) |
 |:--:|
 | *The markers generated from the 59th slice of SC-HF-I-1* |
 
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+| ![watershed_result](/images/watershed_result.png) |
+|:--:|
+| *The result generated from the 59th slice of SC-HF-I-1* |
 
 We evaluate performance using precision, recall, and Jaccard index. The left and right numbers correspond to the result of heart muscle and blood pool.
 Results of models marked with "[postprocessed]" are postprocessed by morphological closing and hole filling.
