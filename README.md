@@ -61,9 +61,9 @@ a. thresholding (threshold = 0 / Otsu / Li)
 We can easily see how thresholding can be useful by looking at the intensity histograms. After normalizing the image to zero mean unit variance, we could then generate a binary image by picking an appropriate threshold value.
 Besides using zero as threshold, we could also use other heuristics (i.e. Otsu and Li) to determine the threshold value.
 
-| ![histogram](/images/histogram.png){:height="50%" width="50%"} |
+| ![histogram](/images/histogram.png) |
 |:--:|
-| *The histogram generated with the 59th slice of SC-HF-I-1* |
+| *The histogram generated from the 59th slice of SC-HF-I-1* |
 
 b. thresholding (Gaussian mixture model, GMM)
 
@@ -73,9 +73,9 @@ c. Watershed segmentation
 
 Generate markers then apply standard watershed algorithm.
 
-| ![watershed](/images/watershed.png){:height="50%" width="50%"} |
+| ![watershed_marker](/images/watershed_marker.png) |
 |:--:|
-| *The histogram generated with the 59th slice of SC-HF-I-1* |
+| *The markers generated from the 59th slice of SC-HF-I-1* |
 
 [[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
 
