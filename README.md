@@ -69,12 +69,18 @@ c. Watershed segmentation
 
 Generate markers then apply standard watershed algorithm.
 
-We evaluate performance using accuracy, recall, and Jaccard index. The left and right numbers correspond to the result of heart muscle and blood pool.
+We evaluate performance using precision, recall, and Jaccard index. The left and right numbers correspond to the result of heart muscle and blood pool.
+Results of Models marked with "[postprocessed]" are postprocessed by morphological closing and hole filling.
 
-| Model         | Accuracy      | Recall        | Jaccard       |
+| Model         | Precision      | Recall        | Jaccard       |
 | ------------- | ------------- | ------------- | ------------- |
-| threshold (t = 0)  | Content Cell  | Content Cell  | Recall        |
-| threshold (Otsu)  | Content Cell  | Content Cell  | Recall        |
-| threshold (Li)  | Content Cell  | Content Cell  | Recall        |
-| threshold (GMM)  | Content Cell  | Content Cell  | Recall        |
-| Watershed  | Content Cell  | Content Cell  | Recall        |
+| threshold (t = 0)  | 0.951 / 0.795  | 0.725 / 0.966  | 0.699 / 0.774        |
+| threshold (t = 0), [postprocessed]  | 0.949 / 0.820  | 0.749 / 0.966  | 0.720 / 0.797        |
+| threshold (Otsu)  | 0.941 / 0.811  | 0.739 / 0.960  | 0.706 / 0.784        |
+| threshold (Otsu), [postprocessed]  | 0.937 / 0.831  | 0.759 / 0.958  | 0.722 / 0.802        |
+| threshold (Li)  | 0.915 / 0.848  | 0.774 / 0.946  | 0.722 / 0.809        |
+| threshold (Li), [postprocessed]  | 0.909 / 0.867  | 0.796 / 0.944  | 0.737 / 0.825        |
+| threshold (GMM)  | 0.911 / 0.819  | 0.741 / 0.942  | 0.691 / 0.780        |
+| threshold (GMM), [postprocessed]  | 0.906 / 0.835  | 0.757 / 0.939  | 0.702 / 0.792        |
+| Watershed  | 0.848 / 0.931  | 0.874 / 0.915  | 0.756 / 0.857        |
+| Watershed, [postprocessed]  | 0.843 / 0.932  | 0.875 / 0.912  | 0.752 / 0.855        |
