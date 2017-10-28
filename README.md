@@ -64,6 +64,10 @@ Besides using zero as threshold, we could also use other heuristics (i.e. Otsu a
 ![histogram](/images/histogram.png)
 *image_caption*
 
+| ![histogram](/images/histogram.png) |
+|:--:|
+| *The histogram generated with the 59th slice of SC-HF-I-1* |
+
 b. thresholding (Gaussian mixture model, GMM)
 
 Assuming that the intensity values of the two classes are both generated with a corresponding Gaussian distribution, we could also determine the threshold value after fitting a Gaussian model with the intensity values.
