@@ -88,7 +88,7 @@ class Dataset2D_DICOM(Dataset):
                         except:
                             raise RuntimeError('cannot parse dicom file "{}"'.format(dicom_fn))
 
-                        print(z, ocont_file_path)
+                        # print(z, ocont_file_path)
 
                         # make sure everything looks good
                         assert ((h, w) == pixels.shape)

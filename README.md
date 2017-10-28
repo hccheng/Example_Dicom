@@ -97,4 +97,4 @@ Results of models marked with "[postprocessed]" are postprocessed by morphologic
 | Watershed  | 0.848 / 0.931  | 0.874 / 0.915  | 0.756 / 0.857        |
 | Watershed, [postprocessed]  | 0.843 / 0.932  | 0.875 / 0.912  | 0.752 / 0.855        |
 
-The results suggest that watershed segmentation works the best.
+The results suggest that watershed segmentation works the best. Postprocessing improves performance except for watershed.

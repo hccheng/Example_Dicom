@@ -61,7 +61,7 @@ if __name__ == '__main__':
             '''
 
             # option 3: watershed segmentation
-            # '''
+            '''
             m1 = binary_erosion(roi, iterations=3) != roi
             m2 = binary_erosion(roi, iterations=6)
             marker = np.zeros(label.shape)
@@ -74,11 +74,11 @@ if __name__ == '__main__':
             label_predict[roi] = dataset.LABEL_HEART_MUSCLE
             label_predict[np.logical_and(roi, result == dataset.LABEL_BLOOD_POOL)] = dataset.LABEL_BLOOD_POOL
 
-            plt.imshow(image, cmap='gray')
-            plt.imshow(label_predict, cmap='jet', alpha=0.5)
-            # '''
+            # plt.imshow(image, cmap='gray')
+            # plt.imshow(label_predict, cmap='jet', alpha=0.5)
+            '''
 
-            bins = np.linspace(-2.0, 2.0, 100)
+            # bins = np.linspace(-2.0, 2.0, 100)
             # plt.subplot(2, 2, 2)
             # plt.hist(norm_image[label > 0], alpha=0.5, histtype='stepfilled', bins=bins)
             # plt.hist(norm_image[label == dataset.LABEL_HEART_MUSCLE], alpha=0.5, histtype='stepfilled',
@@ -104,8 +104,8 @@ if __name__ == '__main__':
             # plt.imshow(image, cmap='gray')
             # plt.imshow(label_predict, cmap='jet', alpha=0.5)
 
-            plt.show()
-            exit()
+            # plt.show()
+            # exit()
 
             # accumulate confusion matarix
             if cmat is not None:
