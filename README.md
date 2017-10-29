@@ -5,7 +5,9 @@ To run unit test, first extract the data to the same directory (c.f. line 6 in t
 
 =================================
 
-Part 1:
+# Challenge 1
+
+### Part 1:
 
 Q1: How did you verify that you are parsing the contours correctly?
 
@@ -15,7 +17,7 @@ Q2: What changes did you make to the code, if any, in order to integrate it into
 
 Minor change to handle errors more consistently.
 
-Part 2:
+### Part 2:
 
 Q1: Did you change anything from the pipelines built in Parts 1 to better streamline the pipeline built in Part 2? If so, what? If not, is there anything that you can imagine changing in the future?
 
@@ -34,13 +36,15 @@ Q3: Given the pipeline you have built, can you see any deficiencies that you wou
 
 =================================
 
-Part 1:
+# Challenge 2
+
+### Part 1:
 
 Q1: Discuss any changes that you made to the pipeline you built in Phase 1, and why you made those changes.
 
 Switch the type of labels from boolean to unsigned char to store class labels (1 for heart muscle, 2 for blood pool). Also, We need to load only those slices with both i-contour and o-contour.
 
-Part 2:
+### Part 2:
 
 Q1: Could you use a simple thresholding scheme to automatically create the i-contours, given the o-contours? Why or why not? Show figures that help justify your answer.
 
@@ -50,7 +54,7 @@ Q2: Do you think that any other heuristic (non-machine learning)-based approache
 
 Assuming that the heart muscle always surround the blood pool, we could generate initial markers for the two regions and then use watershed segmentation to fill in the gap in between the initial markers. Will elaborate more with experiment results.
 
-Experiment results:
+### Experiment results:
 
 The o-contours of SCD0000501 are wrong (about 10 pixels off along the y-axis); I excluded that image from the following evaluation.
 
@@ -67,7 +71,7 @@ Besides using zero as threshold, we could also use other heuristics (i.e. Otsu a
 
 b. thresholding (Gaussian mixture model, GMM)
 
-Assuming that the intensity values of the two classes are both generated with a corresponding Gaussian distribution, we could also determine the threshold value after fitting a Gaussian model with the intensity values.
+Assuming that the intensity values of the two classes are both generated from a corresponding Gaussian distribution, we could also determine the threshold value after fitting a Gaussian model with the intensity values.
 
 c. Watershed segmentation
 
