@@ -1,11 +1,9 @@
+# Challenge 1
+
 Usage: > python train.py <path_to_csv>
 
 To run unit test, first extract the data to the same directory (c.f. line 6 in test_dataset2d_dicom.py) and type
 > python test_dataset2d_dicom.py
-
-=================================
-
-# Challenge 1
 
 ### Part 1:
 
@@ -34,9 +32,12 @@ Q3: Given the pipeline you have built, can you see any deficiencies that you wou
 
 - The extraction should handle cases where images have different sizes (or is different from the target patch size i.e. 256x256). We will need random cropping or padding/mirroring near the boundaries in order to make the patches the same size. In fact, this procedure can be much more complicated if we take into account of the class imbalance problem--for example, we may want comparable numbers of pixels for the majority and minority classes.
 
-=================================
-
 # Challenge 2
+
+Usage: > python segment_icontour.py <path_to_csv>
+
+To run unit test, first extract the data to the same directory (c.f. line 6 in test_dataset2d_dicom.py) and type
+> python test_dataset2d_dicom.py
 
 ### Part 1:
 
